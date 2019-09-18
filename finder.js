@@ -19,5 +19,10 @@ const search = (hay, needle, key) => {
     return matchList;
 };
 
+// array = [ {key: value, key2: value2}, {key: value, key2: value2}]
+// usage => removeItemByKey(array, object, string) => search(array, {key: value}, key)
+const removeItemByKey = (list, item, key) =>
+    list.filter((element) => (item[key] === element[key] ? false : element));
 
-export default { search };
+
+export default { search, removeItemByKey };
